@@ -25,7 +25,7 @@ document.querySelector(".wind").innerHTML= data.wind.speed + " km/h";
 if(data.weather[0].main==="Clouds"){
   weatherIcon.src="images/clouds.png";
 }
-else if(data.weather[0].main==="Clear"){
+else if(data.weather[0].main==="Clear" || data.weather[0].main==="Haze"){
   weatherIcon.src="images/clear.png";
 }
 else if(data.weather[0].main==="Rain"){
@@ -53,3 +53,4 @@ searchBox.addEventListener("keydown", (event) => {
     checkWeather(searchBox.value);
   }
 });
+
